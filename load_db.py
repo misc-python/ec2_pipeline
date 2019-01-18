@@ -6,7 +6,7 @@ import os
 csv_data = pd.read_csv('assets/ks-projects-201801.csv')
 
 # .tail(5) will retrie only the first 5 entries for testing purpose:
-df = pd.DataFrame(csv_data).head(10000)
+df = pd.DataFrame(csv_data).head(100)
 
 df.rename(columns={'ID': 'kickstarter_id',
                    'usd pledged': 'usd_pledged'},

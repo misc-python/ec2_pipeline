@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+ redis:
+    container_name: 'redis_kick'
+    image: redis:latest
+    ports:
+        - "6379:6379"
+    volumes:
+        - redis_data:/data
+    restart: always
+
+ db:
+    image: postgres:10.6-alpine
+    container_name: 'db_kick'
+    volumes:
+        - postgres_data:/var/lib/postgresql/data/
+    restart: always
+
+ web:
+    container_name: 'web_kick'
+    env_file: .env
+    build: .
+    command: /src/entrypoint.sh
+    volumes:
+        - .:/src
+    ports:
+        - "8000:8000"
+    depends_on:
+        - db
+        - redis
+    restart: always
+
+volumes:
+    postgres_data:
+    redis_data:

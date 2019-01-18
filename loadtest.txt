@@ -1,0 +1,59 @@
+# BEFORE CACHE:
+(kickstarter_projects) ➜  kickstarter_projects git:(jl_cache) loadtest -n 10 -c 1 -k http://127.0.0.1:8000
+[Tue Jan 15 2019 14:27:36 GMT-0800 (Pacific Standard Time)] INFO Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:27:41 GMT-0800 (Pacific Standard Time)] INFO Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:27:46 GMT-0800 (Pacific Standard Time)] INFO Requests: 1 (10%), requests per second: 0, mean latency: 7440.8 ms
+[Tue Jan 15 2019 14:27:51 GMT-0800 (Pacific Standard Time)] INFO Requests: 2 (20%), requests per second: 0, mean latency: 7537.9 ms
+[Tue Jan 15 2019 14:27:56 GMT-0800 (Pacific Standard Time)] INFO Requests: 2 (20%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:28:01 GMT-0800 (Pacific Standard Time)] INFO Requests: 3 (30%), requests per second: 0, mean latency: 7568.5 ms
+[Tue Jan 15 2019 14:28:06 GMT-0800 (Pacific Standard Time)] INFO Requests: 4 (40%), requests per second: 0, mean latency: 7388.1 ms
+[Tue Jan 15 2019 14:28:11 GMT-0800 (Pacific Standard Time)] INFO Requests: 4 (40%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:28:16 GMT-0800 (Pacific Standard Time)] INFO Requests: 5 (50%), requests per second: 0, mean latency: 7507.7 ms
+[Tue Jan 15 2019 14:28:21 GMT-0800 (Pacific Standard Time)] INFO Requests: 6 (60%), requests per second: 0, mean latency: 7399.8 ms
+[Tue Jan 15 2019 14:28:26 GMT-0800 (Pacific Standard Time)] INFO Requests: 6 (60%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:28:31 GMT-0800 (Pacific Standard Time)] INFO Requests: 7 (70%), requests per second: 0, mean latency: 7405.1 ms
+[Tue Jan 15 2019 14:28:36 GMT-0800 (Pacific Standard Time)] INFO Requests: 8 (80%), requests per second: 0, mean latency: 7558.3 ms
+[Tue Jan 15 2019 14:28:41 GMT-0800 (Pacific Standard Time)] INFO Requests: 8 (80%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 14:28:46 GMT-0800 (Pacific Standard Time)] INFO Requests: 9 (90%), requests per second: 0, mean latency: 7554.5 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Target URL:          http://127.0.0.1:8000
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Max requests:        10
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Concurrency level:   1
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Agent:               keepalive
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Completed requests:  10
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Total errors:        0
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Total time:          74.87061813800001 s
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Requests per second: 0
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Mean latency:        7486.5 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO Percentage of the requests served within a certain time
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO   50%      7507 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO   90%      7568 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO   95%      7568 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO   99%      7568 ms
+[Tue Jan 15 2019 14:28:51 GMT-0800 (Pacific Standard Time)] INFO  100%      7568 ms (longest request)
+
+
+# AFTER CACHE:
+loadtest -n 10 -c 1 -k http://127.0.0.1:8000
+[Tue Jan 15 2019 15:32:03 GMT-0800 (Pacific Standard Time)] INFO Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 15:32:08 GMT-0800 (Pacific Standard Time)] INFO Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Target URL:          http://127.0.0.1:8000
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Max requests:        10
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Concurrency level:   1
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Agent:               keepalive
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Completed requests:  10
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Total errors:        0
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Total time:          7.490424223 s
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Requests per second: 1
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Mean latency:        747.3 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO Percentage of the requests served within a certain time
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO   50%      4 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO   90%      7433 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO   95%      7433 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO   99%      7433 ms
+[Tue Jan 15 2019 15:32:10 GMT-0800 (Pacific Standard Time)] INFO  100%      7433 ms (longest request)

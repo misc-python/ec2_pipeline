@@ -12,12 +12,18 @@ df.rename(columns={'ID': 'kickstarter_id',
                    'usd pledged': 'usd_pledged'},
           inplace=True)
 
-db_protocol = 'postgresql'
-db_host = os.environ.get('DB_HOST', '')
-db_user = os.environ.get('DB_USER', '')
-db_password = os.environ.get('DB_PASSWORD', '')
-db_name = os.environ.get('DB_NAME', '')
+db_protocol = 'postgresql+psycopg2'
 
+if "RDS_DB_NAME" in os.environ:
+    db_host = os.environ.get('RDS_HOSTNAME', '')
+    db_name = os.environ.get('RDS_DB_NAME', '')
+    db_password = os.environ.get('RDS_PASSWORD', '')
+    db_user = os.environ.get('RDS_USERNAME', '')
+else:
+    db_host = os.environ.get('DB_HOST', '')
+    db_user = os.environ.get('DB_USER', '')
+    db_password = os.environ.get('DB_PASSWORD', '')
+    db_name = os.environ.get('DB_NAME', '')
 
 engine = create_engine('{}://{}:{}@{}:5432/{}'.format(
     db_protocol, db_user, db_password, db_host, db_name
